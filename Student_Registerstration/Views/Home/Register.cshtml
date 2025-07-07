@@ -1,0 +1,114 @@
+﻿@model Student_Registerstration.Models.StudentModel
+
+@{
+    ViewData["Title"] = "Student Registration";
+}
+
+<h2 class="text-center">Student Registration</h2>
+
+<div class="container mt-5">
+    <div class="form-group col-md-6 mb-3">
+        <form asp-action="Register" asp-controller="Home" method="post">
+            <div>
+                <label asp-for="Name" class="form-label fw-bold">Student Name</label>
+                <input asp-for="Name" type="text" class="form-control border border-secondary" placeholder="Enter your Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Email" class="form-label fw-bold">Email</label>
+                <input asp-for="Email" type="email" class="form-control border border-secondary" placeholder="Enter your Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Password" class="form-label fw-bold">Password</label>
+                <input asp-for="Password" class="form-control border border-secondary" placeholder="Enter your password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="ConfirmPassword" class="form-label fw-bold">Conform Password</label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control border border-secondary" placeholder="ReEnter your password" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+@*                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+ *@            </div>
+            <div>
+                <label asp-for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                <input asp-for="PhoneNumber" type="number" class="form-control border border-secondary" placeholder="Enter your Student Phone No" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Address" class="form-label fw-bold">Address</label>
+                <input asp-for="Address" type="text" class="form-control border border-secondary" placeholder="Enter your address" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label fw-bold">Gender</label>
+                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+                    <option>Select Gender</option>
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Class" class="form-label fw-bold">Class</label>
+                <input asp-for="Class" type="text" class="form-control border border-secondary" placeholder="Enter your class" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="ParentesName" class="form-label fw-bold">Parentes Name</label>
+                <input asp-for="ParentesName" type="text" class="form-control border border-secondary" placeholder="Enter your Parentes Name" />
+                <span asp-validation-for="ParentesName" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="ParentesPhoneno" class="form-label fw-bold">Parentes Phone-no</label>
+                <input asp-for="ParentesPhoneno" class="form-control border border-secondary" placeholder="Enter your Parenter-No" />
+                <span asp-validation-for="ParentesPhoneno" class="text-danger"></span>
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="Register" class="btn btn-primary" />
+                <input type="reset" onclick="register()" name="name" value="Cancel" class="btn btn-outline-warning" />
+                @* <button class="btn btn-primary" type="button" onclick="register()">Register</button> *@
+            </div>
+        </form>
+    </div>
+</div>
+@* <script> *@
+
+
+@*     function register(){ *@
+@*         debugger; *@
+@*         var anme=document.getElementById("Name"); *@
+@*         console.log(anme); *@
+@*        var Stdmodel = { *@
+@*         Name:document.getElementById("Name"),  *@
+@*         Email:document.getElementById("Email"), *@
+@*         Password:document.getElementById("Password"), *@
+@*         ConfirmPassword:document.getElementById("ConfirmPassword"), *@
+@*         PhoneNumber:document.getElementById("PhoneNumber"), *@
+@*         Address:document.getElementById("Address"), *@
+@*         Gender:document.getElementById("Gender"), *@
+@*         Class:document.getElementById("Class"), *@
+@*         ParentesName:document.getElementById("ParentesName"), *@
+@*         ParentesPhoneno:document.getElementById("ParentesPhoneno"), *@
+@*         }; *@
+@*        $.ajax({ *@
+@*         type: 'POST', *@
+@*         url: '@Url.Action("Register", "Home")', *@
+@*         data: JSON.stringify({ Stdmodel: Stdmodel }), // Convert the data to JSON format *@
+@*         contentType: 'application/json; charset=utf-8', // Specify the content type *@
+@*         dataType: 'json', // Specify the expected response format *@
+@*         success: function (response) { *@
+@*             console.log("Registration successful:", response); *@
+@*             // Add logic to handle success, e.g., show a success message or redirect *@
+@*         }, *@
+@*         error: function (req, status, error) { *@
+@*             console.error("Error occurred:", error); *@
+@*             // Add logic to handle the error, e.g., show an error message *@
+@*         } *@
+@*     }); *@
+@*     } *@
+@* </script> *@
+
+
+
+
+

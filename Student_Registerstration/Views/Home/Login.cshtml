@@ -1,0 +1,24 @@
+﻿@model Student_Registerstration.Models.StudentModel
+@{
+    
+}
+<div class="container mt-5">
+       <form asp-controller="Home" asp-action="Login" method="post">
+           <!-- Email -->
+            <div class="form-group col-md-6 mb-3">
+                <label asp-for="Email" class="form-label fw-bold">Email</label>
+                <input asp-for="Email" type="email" class="form-control border border-secondary" placeholder="Enter your email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <!-- Password -->
+            <div class="form-group col-md-6 mb-3">
+                <label asp-for="Password" class="form-label fw-bold">Password</label>
+                <input asp-for="Password" type="password" class="form-control border border-secondary" placeholder="Enter your password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                <button type="reset" class="btn btn-outline-warning btn-lg">cancel</button> 
+                <button type="submit" class="btn btn-primary btn-lg">LogIn</button>
+            </div>
+       </form>
+</div>
