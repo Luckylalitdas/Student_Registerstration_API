@@ -129,8 +129,6 @@ namespace Student_Registerstration.Controllers
                 }
             }
             return View(stdmodel);
-
-            int i = 20;
         }
     }
 }
